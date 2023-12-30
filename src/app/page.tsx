@@ -1,5 +1,7 @@
+import Container from '@/components/common/container'
+
 const HomePage = async () => {
-  return <main></main>
+  return <Container></Container>
 }
 
 export default HomePage

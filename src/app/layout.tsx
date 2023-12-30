@@ -15,7 +15,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={poppinsFont.className}>
-        {children}
+        <main>{children}</main>
         <Toaster />
       </body>
     </html>
