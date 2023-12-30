@@ -25,6 +25,7 @@ type Props = {
   onChange?: (value: string) => void
   placeholder?: string
   className?: string
+  disabled?: boolean
 }
 
 const Combobox = ({
@@ -33,6 +34,7 @@ const Combobox = ({
   value,
   placeholder = 'Select',
   className = '',
+  disabled = false,
 }: Props) => {
   const [open, setOpen] = useState(false)
 
@@ -40,6 +42,7 @@ const Combobox = ({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
+          disabled={disabled}
           variant="outline"
           role="combobox"
           aria-expanded={open}
