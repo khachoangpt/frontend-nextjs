@@ -1,11 +1,5 @@
-import { Input } from '@/components/ui/input'
-
 const HomePage = async () => {
-  return (
-    <main>
-      <Input />
-    </main>
-  )
+  return <main></main>
 }
 
 export default HomePage
