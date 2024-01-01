@@ -1,3 +1,4 @@
 import common from './en/common.json'
+import home from './en/home.json'
 
-export default { ...common } ?? {}
+export default { ...common, ...home } ?? {}
