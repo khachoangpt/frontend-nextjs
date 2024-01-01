@@ -1,9 +1,9 @@
-import { HTMLAttributes, PropsWithChildren } from 'react'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
 const Container = ({
   children,
   ...rest
-}: PropsWithChildren<HTMLAttributes<HTMLDivElement>>) => {
+}: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => {
   return <div {...rest}>{children}</div>
 }
 
