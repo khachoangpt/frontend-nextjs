@@ -9,6 +9,7 @@ import {
   HTMLAttributes,
 } from 'react'
 
+import Container from '@/components/common/container'
 import { cn } from '@/lib/utils'
 
 const Dialog = DialogPrimitive.Root
@@ -62,7 +63,7 @@ const DialogHeader = ({
   className,
   ...props
 }: HTMLAttributes<HTMLDivElement>) => (
-  <div
+  <Container
     className={cn(
       'flex flex-col space-y-1.5 text-center sm:text-left',
       className,
@@ -76,7 +77,7 @@ const DialogFooter = ({
   className,
   ...props
 }: HTMLAttributes<HTMLDivElement>) => (
-  <div
+  <Container
     className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
       className,

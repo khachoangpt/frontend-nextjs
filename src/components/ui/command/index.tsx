@@ -10,6 +10,7 @@ import {
   HTMLAttributes,
 } from 'react'
 
+import Container from '@/components/common/container'
 import { cn } from '@/lib/utils'
 
 import { Dialog, DialogContent } from '../dialog'
@@ -47,7 +48,7 @@ const CommandInput = forwardRef<
   ElementRef<typeof CommandPrimitive.Input>,
   ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(({ className, ...props }, ref) => (
-  <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
+  <Container className="flex items-center border-b px-3" cmdk-input-wrapper="">
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
       ref={ref}
@@ -57,7 +58,7 @@ const CommandInput = forwardRef<
       )}
       {...props}
     />
-  </div>
+  </Container>
 ))
 
 CommandInput.displayName = CommandPrimitive.Input.displayName

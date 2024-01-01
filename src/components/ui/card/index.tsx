@@ -1,12 +1,13 @@
 import { forwardRef, HTMLAttributes } from 'react'
 
+import Container from '@/components/common/container'
 import Heading from '@/components/common/heading'
 import Paragraph from '@/components/common/paragraph'
 import { cn } from '@/lib/utils'
 
 const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div
+    <Container
       ref={ref}
       className={cn(
         'rounded-lg border bg-card text-card-foreground shadow-sm',
@@ -20,7 +21,7 @@ Card.displayName = 'Card'
 
 const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div
+    <Container
       ref={ref}
       className={cn('flex flex-col space-y-1.5 p-6', className)}
       {...props}
@@ -51,14 +52,14 @@ CardDescription.displayName = 'CardDescription'
 
 const CardContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
+    <Container ref={ref} className={cn('p-6 pt-0', className)} {...props} />
   ),
 )
 CardContent.displayName = 'CardContent'
 
 const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div
+    <Container
       ref={ref}
       className={cn('flex items-center p-6 pt-0', className)}
       {...props}
