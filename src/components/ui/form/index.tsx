@@ -18,6 +18,7 @@ import {
   useFormContext,
 } from 'react-hook-form'
 
+import Paragraph from '@/components/common/paragraph'
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'
 
@@ -137,7 +138,7 @@ const FormDescription = forwardRef<
   const { formDescriptionId } = useFormField()
 
   return (
-    <p
+    <Paragraph
       ref={ref}
       id={formDescriptionId}
       className={cn('text-sm text-muted-foreground', className)}
@@ -159,14 +160,14 @@ const FormMessage = forwardRef<
   }
 
   return (
-    <p
+    <Paragraph
       ref={ref}
       id={formMessageId}
       className={cn('text-sm font-medium text-destructive', className)}
       {...props}
     >
       {body}
-    </p>
+    </Paragraph>
   )
 })
 FormMessage.displayName = 'FormMessage'

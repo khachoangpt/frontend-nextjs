@@ -1,9 +1,12 @@
-import { HTMLAttributes, PropsWithChildren } from 'react'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
 const Paragraph = ({
   children,
   ...rest
-}: PropsWithChildren<HTMLAttributes<HTMLParagraphElement>>) => {
+}: DetailedHTMLProps<
+  HTMLAttributes<HTMLParagraphElement>,
+  HTMLParagraphElement
+>) => {
   return <p {...rest}>{children}</p>
 }
 

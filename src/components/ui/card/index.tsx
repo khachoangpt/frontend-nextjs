@@ -1,5 +1,7 @@
 import { forwardRef, HTMLAttributes } from 'react'
 
+import Heading from '@/components/common/heading'
+import Paragraph from '@/components/common/paragraph'
 import { cn } from '@/lib/utils'
 
 const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
@@ -31,14 +33,7 @@ const CardTitle = forwardRef<
   HTMLParagraphElement,
   HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-  <h3
-    ref={ref}
-    className={cn(
-      'text-2xl font-semibold leading-none tracking-tight',
-      className,
-    )}
-    {...props}
-  />
+  <Heading level={3} ref={ref} className={cn('', className)} {...props} />
 ))
 CardTitle.displayName = 'CardTitle'
 
@@ -46,7 +41,7 @@ const CardDescription = forwardRef<
   HTMLParagraphElement,
   HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p
+  <Paragraph
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
