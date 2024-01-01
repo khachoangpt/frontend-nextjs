@@ -1,3 +1,3 @@
-type Messages = typeof import('../../messages/en/common.json')
+type Messages = typeof import('../../messages').default
 
 declare interface IntlMessages extends Messages {}
