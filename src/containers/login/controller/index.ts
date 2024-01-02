@@ -28,7 +28,7 @@ const useLoginController = () => {
         style: { color: 'green' },
       })
     } catch (error) {
-      toast.error((error as ApiError).message, {
+      toast.error((error as ApiError).body?.message ?? 'Login error', {
         position: 'top-center',
         style: { color: 'red' },
       })
