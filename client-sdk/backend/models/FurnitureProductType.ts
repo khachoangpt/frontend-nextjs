@@ -7,17 +7,18 @@ export type FurnitureProductType = {
   /**
    * Brand name of product with furniture type
    */
-  brand?: string
+  brand?: string;
   /**
    * Size of product with furniture type
    */
-  size?: string
+  size?: string;
   /**
    * Material of product with furniture type
    */
-  material?: string
+  material?: string;
   /**
    * Shop id
    */
-  shop?: string
-}
+  shop?: string;
+};
+

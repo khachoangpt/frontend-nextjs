@@ -4,4 +4,4 @@
 /* eslint-disable */
 export const $ProductTypeEnum = {
   type: 'Enum',
-} as const
+} as const;

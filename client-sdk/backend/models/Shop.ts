@@ -7,26 +7,27 @@ export type Shop = {
   /**
    * Name of shop
    */
-  name?: string
+  name?: string;
   /**
    * Email of shop
    */
-  email?: string
+  email?: string;
   /**
    * Status of shop
    */
-  status?: Shop.status
+  status?: Shop.status;
   /**
    * Is shop verified
    */
-  verify?: boolean
+  verify?: boolean;
   /**
    * List of roles
    */
-  roles?: Array<string>
-}
+  roles?: Array<string>;
+};
 
 export namespace Shop {
+
   /**
    * Status of shop
    */
@@ -34,4 +35,7 @@ export namespace Shop {
     ACTIVE = 'active',
     INACTIVE = 'inactive',
   }
+
+
 }
+

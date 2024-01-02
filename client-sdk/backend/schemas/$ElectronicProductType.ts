@@ -21,4 +21,4 @@ export const $ElectronicProductType = {
       description: `Shop id`,
     },
   },
-} as const
+} as const;

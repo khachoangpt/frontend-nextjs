@@ -4,6 +4,7 @@
 /* eslint-disable */
 
 export type RefreshTokenDTO = {
-  accessToken?: string
-  refreshToken?: string
-}
+  accessToken?: string;
+  refreshToken?: string;
+};
+

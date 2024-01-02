@@ -4,5 +4,6 @@
 /* eslint-disable */
 
 export type RefreshTokenParams = {
-  refreshToken?: string
-}
+  refreshToken?: string;
+};
+

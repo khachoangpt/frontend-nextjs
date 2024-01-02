@@ -18,4 +18,4 @@ export const $SignUpDTO = {
       },
     },
   },
-} as const
+} as const;

@@ -14,4 +14,4 @@ export const $SignUpParams = {
       type: 'string',
     },
   },
-} as const
+} as const;

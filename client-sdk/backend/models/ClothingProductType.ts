@@ -7,17 +7,18 @@ export type ClothingProductType = {
   /**
    * Brand name of product with clothing type
    */
-  brand?: string
+  brand?: string;
   /**
    * Size of product with clothing type
    */
-  size?: string
+  size?: string;
   /**
    * Material of product with clothing type
    */
-  material?: string
+  material?: string;
   /**
    * Shop id
    */
-  shop?: string
-}
+  shop?: string;
+};
+

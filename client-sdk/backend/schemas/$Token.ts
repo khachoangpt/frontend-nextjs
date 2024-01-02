@@ -23,4 +23,4 @@ export const $Token = {
       },
     },
   },
-} as const
+} as const;

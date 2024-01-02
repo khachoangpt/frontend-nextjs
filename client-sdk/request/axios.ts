@@ -4,7 +4,7 @@ import axios, {
   AxiosRequestHeaders,
   InternalAxiosRequestConfig,
 } from 'axios'
-import { cookies } from 'next/headers'
+import {parseCookies} from 'nookies'
 import * as rax from 'retry-axios'
 
 const defaultConfig = {
@@ -32,14 +32,15 @@ const defaultConfig = {
 const addRequestInterceptors = (instance: AxiosInstance) => {
   instance.interceptors.request.use(
     async (config: InternalAxiosRequestConfig<unknown>) => {
-      const cookiesStore = cookies()
-      const jwt = cookiesStore.get('jwt')
+      const cookies = parseCookies()
+      const jwt = cookies['jwt']
       if (jwt) {
         if (!config.headers) {
           config.headers = {} as AxiosRequestHeaders
         }
-        config.headers['Authorization'] = `Bearer ${jwt.value}`
+        config.headers['Authorization'] = `Bearer ${jwt}`
       }
+      config.headers['x-api-key'] = process.env.NEXT_PUBLIC_X_API_KEY
 
       return config
     },

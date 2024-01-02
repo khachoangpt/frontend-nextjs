@@ -11,4 +11,4 @@ export const $LoginParams = {
       type: 'string',
     },
   },
-} as const
+} as const;

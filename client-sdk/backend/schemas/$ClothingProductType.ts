@@ -21,4 +21,4 @@ export const $ClothingProductType = {
       description: `Shop id`,
     },
   },
-} as const
+} as const;

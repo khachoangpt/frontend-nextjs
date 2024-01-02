@@ -1,4 +1,4 @@
-import { ChangeEventHandler } from 'react'
+import { ChangeEventHandler, HTMLInputTypeAttribute } from 'react'
 
 import {
   FormControl,
@@ -18,6 +18,7 @@ type Props = {
   onChange?: ChangeEventHandler<HTMLInputElement>
   value?: string
   disabled?: boolean
+  type?: HTMLInputTypeAttribute
 }
 
 const FormInput = ({
@@ -28,6 +29,7 @@ const FormInput = ({
   onChange,
   value,
   disabled = false,
+  type = 'text',
 }: Props) => {
   return (
     <FormItem>
@@ -39,6 +41,7 @@ const FormInput = ({
           onChange={onChange}
           value={value}
           disabled={disabled}
+          type={type}
         />
       </FormControl>
       <FormDescription>{description}</FormDescription>

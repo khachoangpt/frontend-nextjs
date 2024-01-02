@@ -2,15 +2,16 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { CreateProductParams } from '../models/CreateProductParams'
-import type { Product } from '../models/Product'
-import type { PublishProductBody } from '../models/PublishProductBody'
+import type { CreateProductParams } from '../models/CreateProductParams';
+import type { Product } from '../models/Product';
+import type { PublishProductBody } from '../models/PublishProductBody';
 
-import type { CancelablePromise } from '../core/CancelablePromise'
-import { OpenAPI } from '../core/OpenAPI'
-import { request as __request } from '../core/request'
+import type { CancelablePromise } from '../core/CancelablePromise';
+import { OpenAPI } from '../core/OpenAPI';
+import { request as __request } from '../core/request';
 
 export class ProductService {
+
   /**
    * Create product
    * Customer create product
@@ -23,22 +24,22 @@ export class ProductService {
     xClientId,
     requestBody,
   }: {
-    xApiKey: string
-    authorization: string
-    xClientId: string
-    requestBody?: CreateProductParams
+    xApiKey: string,
+    authorization: string,
+    xClientId: string,
+    requestBody?: CreateProductParams,
   }): CancelablePromise<Product> {
     return __request(OpenAPI, {
       method: 'POST',
       url: '/customer/product',
       headers: {
         'x-api-key': xApiKey,
-        authorization: authorization,
+        'authorization': authorization,
         'x-client-id': xClientId,
       },
       body: requestBody,
       mediaType: 'application/json',
-    })
+    });
   }
 
   /**
@@ -52,9 +53,9 @@ export class ProductService {
     limit,
     offset,
   }: {
-    xApiKey: string
-    limit?: number
-    offset?: number
+    xApiKey: string,
+    limit?: number,
+    offset?: number,
   }): CancelablePromise<Array<Product>> {
     return __request(OpenAPI, {
       method: 'GET',
@@ -63,10 +64,10 @@ export class ProductService {
         'x-api-key': xApiKey,
       },
       query: {
-        limit: limit,
-        offset: offset,
+        'limit': limit,
+        'offset': offset,
       },
-    })
+    });
   }
 
   /**
@@ -82,25 +83,25 @@ export class ProductService {
     limit,
     offset,
   }: {
-    xApiKey: string
-    authorization: string
-    xClientId: string
-    limit?: number
-    offset?: number
+    xApiKey: string,
+    authorization: string,
+    xClientId: string,
+    limit?: number,
+    offset?: number,
   }): CancelablePromise<Array<Product>> {
     return __request(OpenAPI, {
       method: 'GET',
       url: '/customer/product/draft',
       headers: {
         'x-api-key': xApiKey,
-        authorization: authorization,
+        'authorization': authorization,
         'x-client-id': xClientId,
       },
       query: {
-        limit: limit,
-        offset: offset,
+        'limit': limit,
+        'offset': offset,
       },
-    })
+    });
   }
 
   /**
@@ -113,22 +114,22 @@ export class ProductService {
     xApiKey,
     id,
   }: {
-    xApiKey: string
+    xApiKey: string,
     /**
      * product id
      */
-    id: string
+    id: string,
   }): CancelablePromise<Product> {
     return __request(OpenAPI, {
       method: 'GET',
       url: '/customer/product/{id}',
       path: {
-        id: id,
+        'id': id,
       },
       headers: {
         'x-api-key': xApiKey,
       },
-    })
+    });
   }
 
   /**
@@ -144,25 +145,25 @@ export class ProductService {
     limit,
     offset,
   }: {
-    xApiKey: string
-    authorization: string
-    xClientId: string
-    limit?: number
-    offset?: number
+    xApiKey: string,
+    authorization: string,
+    xClientId: string,
+    limit?: number,
+    offset?: number,
   }): CancelablePromise<Array<Product>> {
     return __request(OpenAPI, {
       method: 'GET',
       url: '/customer/product/published',
       headers: {
         'x-api-key': xApiKey,
-        authorization: authorization,
+        'authorization': authorization,
         'x-client-id': xClientId,
       },
       query: {
-        limit: limit,
-        offset: offset,
+        'limit': limit,
+        'offset': offset,
       },
-    })
+    });
   }
 
   /**
@@ -177,22 +178,22 @@ export class ProductService {
     xClientId,
     requestBody,
   }: {
-    xApiKey: string
-    authorization: string
-    xClientId: string
-    requestBody?: PublishProductBody
+    xApiKey: string,
+    authorization: string,
+    xClientId: string,
+    requestBody?: PublishProductBody,
   }): CancelablePromise<Product> {
     return __request(OpenAPI, {
       method: 'POST',
       url: '/customer/product/publish',
       headers: {
         'x-api-key': xApiKey,
-        authorization: authorization,
+        'authorization': authorization,
         'x-client-id': xClientId,
       },
       body: requestBody,
       mediaType: 'application/json',
-    })
+    });
   }
 
   /**
@@ -205,8 +206,8 @@ export class ProductService {
     xApiKey,
     q,
   }: {
-    xApiKey: string
-    q?: string
+    xApiKey: string,
+    q?: string,
   }): CancelablePromise<Array<Product>> {
     return __request(OpenAPI, {
       method: 'GET',
@@ -215,8 +216,9 @@ export class ProductService {
         'x-api-key': xApiKey,
       },
       query: {
-        q: q,
+        'q': q,
       },
-    })
+    });
   }
+
 }

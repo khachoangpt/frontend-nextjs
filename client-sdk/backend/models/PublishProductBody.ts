@@ -4,5 +4,6 @@
 /* eslint-disable */
 
 export type PublishProductBody = {
-  productId?: string
-}
+  productId?: string;
+};
+

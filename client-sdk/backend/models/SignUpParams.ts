@@ -4,7 +4,8 @@
 /* eslint-disable */
 
 export type SignUpParams = {
-  name?: string
-  email?: string
-  password?: string
-}
+  name?: string;
+  email?: string;
+  password?: string;
+};
+

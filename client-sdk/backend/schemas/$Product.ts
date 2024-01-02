@@ -52,8 +52,9 @@ export const $Product = {
     attributes: {
       type: 'dictionary',
       contains: {
-        properties: {},
+        properties: {
+        },
       },
     },
   },
-} as const
+} as const;

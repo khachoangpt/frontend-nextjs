@@ -8,4 +8,4 @@ usageMatchRegex:
   - "[^\\w\\d]t\\(['\"`]({key})['\"`]"
 
 scopeRangeRegex: "getTranslations\\(\\s*\\[?\\s*['\"`](.*?)['\"`]"
-monopoly: true
+monopoly: false

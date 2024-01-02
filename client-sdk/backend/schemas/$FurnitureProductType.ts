@@ -21,4 +21,4 @@ export const $FurnitureProductType = {
       description: `Shop id`,
     },
   },
-} as const
+} as const;

@@ -7,17 +7,18 @@ export type ElectronicProductType = {
   /**
    * Manufacturer name of product with electronic type
    */
-  manufacturer?: string
+  manufacturer?: string;
   /**
    * Model of product with electronic type
    */
-  model?: string
+  model?: string;
   /**
    * Color of product with electronic type
    */
-  color?: string
+  color?: string;
   /**
    * Shop id
    */
-  shop?: string
-}
+  shop?: string;
+};
+

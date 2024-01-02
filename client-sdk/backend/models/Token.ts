@@ -7,17 +7,18 @@ export type Token = {
   /**
    * User id
    */
-  user?: string
+  user?: string;
   /**
    * public key
    */
-  publicKey?: string
+  publicKey?: string;
   /**
    * refresh token
    */
-  refreshToken?: string
+  refreshToken?: string;
   /**
    * List of refresh token used
    */
-  refreshTokenUsed?: Array<string>
-}
+  refreshTokenUsed?: Array<string>;
+};
+

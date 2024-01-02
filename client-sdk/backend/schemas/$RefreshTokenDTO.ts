@@ -11,4 +11,4 @@ export const $RefreshTokenDTO = {
       type: 'string',
     },
   },
-} as const
+} as const;

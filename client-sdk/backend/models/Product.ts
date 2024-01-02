@@ -3,50 +3,51 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ProductTypeEnum } from './ProductTypeEnum'
+import type { ProductTypeEnum } from './ProductTypeEnum';
 
 export type Product = {
   /**
    * Product name
    */
-  title?: string
+  title?: string;
   /**
    * Product thumbnail url
    */
-  thumbnail?: string
+  thumbnail?: string;
   /**
    * Product description
    */
-  description?: string
+  description?: string;
   /**
    * Product slug
    */
-  slug?: string
+  slug?: string;
   /**
    * Product rating
    */
-  ratings?: number
+  ratings?: number;
   /**
    * Product variant
    */
-  variants?: any[]
-  is_draft?: boolean
-  is_published?: boolean
+  variants?: any[];
+  is_draft?: boolean;
+  is_published?: boolean;
   /**
    * Price of product
    */
-  price?: number
+  price?: number;
   /**
    * Product inventory quantity
    */
-  quantity?: number
-  type?: ProductTypeEnum
+  quantity?: number;
+  type?: ProductTypeEnum;
   /**
    * Shop name
    */
-  shop?: string
+  shop?: string;
   /**
    * Product attributes
    */
-  attributes?: Record<string, any>
-}
+  attributes?: Record<string, any>;
+};
+

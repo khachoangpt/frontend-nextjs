@@ -8,4 +8,4 @@ export const $RefreshTokenParams = {
       type: 'string',
     },
   },
-} as const
+} as const;

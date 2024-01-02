@@ -8,4 +8,4 @@ export const $CreateApikeyParams = {
       type: 'Enum',
     },
   },
-} as const
+} as const;

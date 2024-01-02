@@ -30,20 +30,16 @@ export const $CreateProductParams = {
     },
     attributes: {
       type: 'one-of',
-      contains: [
-        {
-          type: 'ClothingProductType',
-        },
-        {
-          type: 'ElectronicProductType',
-        },
-        {
-          type: 'FurnitureProductType',
-        },
-      ],
+      contains: [{
+        type: 'ClothingProductType',
+      }, {
+        type: 'ElectronicProductType',
+      }, {
+        type: 'FurnitureProductType',
+      }],
     },
     description: {
       type: 'string',
     },
   },
-} as const
+} as const;

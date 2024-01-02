@@ -16,4 +16,4 @@ export const $ApiKey = {
       type: 'Enum',
     },
   },
-} as const
+} as const;

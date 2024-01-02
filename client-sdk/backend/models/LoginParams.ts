@@ -4,6 +4,7 @@
 /* eslint-disable */
 
 export type LoginParams = {
-  email?: string
-  password?: string
-}
+  email?: string;
+  password?: string;
+};
+

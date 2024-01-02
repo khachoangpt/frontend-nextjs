@@ -2,14 +2,15 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { ApiKey } from '../models/ApiKey'
-import type { CreateApikeyParams } from '../models/CreateApikeyParams'
+import type { ApiKey } from '../models/ApiKey';
+import type { CreateApikeyParams } from '../models/CreateApikeyParams';
 
-import type { CancelablePromise } from '../core/CancelablePromise'
-import { OpenAPI } from '../core/OpenAPI'
-import { request as __request } from '../core/request'
+import type { CancelablePromise } from '../core/CancelablePromise';
+import { OpenAPI } from '../core/OpenAPI';
+import { request as __request } from '../core/request';
 
 export class ApiKeyService {
+
   /**
    * Create apikey
    * Create apikey
@@ -19,13 +20,14 @@ export class ApiKeyService {
   public static createApiKey({
     requestBody,
   }: {
-    requestBody?: CreateApikeyParams
+    requestBody?: CreateApikeyParams,
   }): CancelablePromise<ApiKey> {
     return __request(OpenAPI, {
       method: 'POST',
       url: '/customer/apikey',
       body: requestBody,
       mediaType: 'application/json',
-    })
+    });
   }
+
 }

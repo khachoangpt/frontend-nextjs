@@ -26,4 +26,4 @@ export const $Shop = {
       },
     },
   },
-} as const
+} as const;

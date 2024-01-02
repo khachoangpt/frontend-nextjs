@@ -18,4 +18,4 @@ export const $LoginDTO = {
       },
     },
   },
-} as const
+} as const;

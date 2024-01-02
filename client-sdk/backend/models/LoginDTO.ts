@@ -3,12 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Shop } from './Shop'
+import type { Shop } from './Shop';
 
 export type LoginDTO = {
-  shop?: Shop
+  shop?: Shop;
   token?: {
-    accessToken?: string
-    refreshToken?: string
-  }
-}
+    accessToken?: string;
+    refreshToken?: string;
+  };
+};
+
