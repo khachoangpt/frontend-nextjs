@@ -3,7 +3,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
 import { loginSchema } from '@/constants/validation-schema'
-import { LoginParams, ShopService } from '$/backend'
+import { ApiError, LoginParams, ShopService } from '$/backend'
 
 const useLoginController = () => {
   const defaultValues: LoginParams = { email: '', password: '' }
@@ -27,7 +27,12 @@ const useLoginController = () => {
         position: 'top-center',
         style: { color: 'green' },
       })
-    } catch (error) {}
+    } catch (error) {
+      toast.error((error as ApiError).message, {
+        position: 'top-center',
+        style: { color: 'red' },
+      })
+    }
   }
 
   return { control, handleSubmit, login, errors, loginForm }
