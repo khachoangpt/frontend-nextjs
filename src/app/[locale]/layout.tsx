@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 
 import { Toaster } from '@/components/ui/sonner'
-import { poppinsFont } from '@/configs'
+import { fontConfig } from '@/configs'
 
 type LayoutProps = {
   children: ReactNode
@@ -14,7 +14,7 @@ type LayoutProps = {
 export default function RootLayout({ children, params }: LayoutProps) {
   return (
     <html lang={params.locale}>
-      <body className={poppinsFont.className}>
+      <body className={fontConfig.className}>
         <main>{children}</main>
         <Toaster />
       </body>
