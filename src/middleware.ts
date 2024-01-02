@@ -1,11 +1,13 @@
 import { NextRequest } from 'next/server'
 import createIntlMiddleware from 'next-intl/middleware'
 
+import { COOKIES } from './constants/enum'
 import { locales } from './i18n'
 
 export default async function middleware(request: NextRequest) {
   const defaultLocale = locales[0]
-  const locale = request.cookies.get('NEXT_LOCALE')
+  const locale =
+    request.cookies.get(COOKIES.NEXT_LOCALE)?.value ?? defaultLocale
   const pathname = request.nextUrl.pathname
 
   const pathnameIsMissingLocale = locales.every(
@@ -17,18 +19,14 @@ export default async function middleware(request: NextRequest) {
     locales,
     defaultLocale,
   })
-  if (pathnameIsMissingLocale) {
-    if (locale?.value === defaultLocale) {
-      request.nextUrl.pathname = `/${locale?.value}${
-        pathname.startsWith('/') ? '' : '/'
-      }${pathname}`
-    }
+
+  if (pathnameIsMissingLocale && locale === defaultLocale) {
+    request.nextUrl.pathname = `/${locale}${
+      pathname.startsWith('/') ? '' : '/'
+    }${pathname}`
   }
 
   const response = handleI18nRouting(request)
-
-  // Step 3: Alter the response (example)
-  response.headers.set('x-your-custom-locale', defaultLocale)
 
   return response
 }
