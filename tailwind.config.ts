@@ -18,9 +18,6 @@ const config = {
       },
     },
     extend: {
-      maxWidth: {
-        primary: '80rem',
-      },
       backgroundColor: {
         e7e8ec: '#e7e8ec',
       },

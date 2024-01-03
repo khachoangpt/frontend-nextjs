@@ -15,7 +15,7 @@ import {
 const MenuHeader = () => {
   return (
     <Container className="bg-e7e8ec">
-      <NavigationMenu className="m-auto flex max-w-primary items-center justify-end">
+      <NavigationMenu className="m-auto flex max-w-7xl items-center justify-end">
         <NavigationMenuList className="space-x-6">
           {menuItems.map((item) => (
             <NavigationMenuItem key={`${item.href}_${item.title}`} className="">
