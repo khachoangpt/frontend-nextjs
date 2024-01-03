@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 
+import Container from '@/components/common/container'
 import FormInput from '@/components/common/form/form-input'
 import { Button } from '@/components/ui/button'
 import { Form, FormField } from '@/components/ui/form'
@@ -14,25 +15,27 @@ const LoginForm = () => {
 
   return (
     <Form {...loginForm}>
-      <FormField
-        control={control}
-        name="email"
-        render={({ field: { onChange, value } }) => (
-          <FormInput onChange={onChange} value={value} label={t('email')} />
-        )}
-      />
-      <FormField
-        control={control}
-        name="password"
-        render={({ field: { onChange, value } }) => (
-          <FormInput
-            onChange={onChange}
-            value={value}
-            label={t('password')}
-            type="password"
-          />
-        )}
-      />
+      <Container className="space-y-8">
+        <FormField
+          control={control}
+          name="email"
+          render={({ field: { onChange, value } }) => (
+            <FormInput onChange={onChange} value={value} label={t('email')} />
+          )}
+        />
+        <FormField
+          control={control}
+          name="password"
+          render={({ field: { onChange, value } }) => (
+            <FormInput
+              onChange={onChange}
+              value={value}
+              label={t('password')}
+              type="password"
+            />
+          )}
+        />
+      </Container>
       <Button onClick={handleSubmit(login)}>Login</Button>
     </Form>
   )

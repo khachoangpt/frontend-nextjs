@@ -8,7 +8,7 @@ type PageProps = {
 
 const HomePage = async ({ searchParams }: PageProps) => {
   const offset = Number(searchParams?.offset)
-  await getProducts({ offset: offset ? offset : 0 })
+  await Promise.all([getProducts({ offset: offset ? offset : 0 })])
 
   return (
     <DefaultLayout>

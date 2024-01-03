@@ -6,6 +6,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+  useFormField,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
@@ -31,13 +32,15 @@ const FormInput = ({
   disabled = false,
   type = 'text',
 }: Props) => {
+  const { error } = useFormField()
+
   return (
     <FormItem>
       <FormLabel>{label}</FormLabel>
       <FormControl>
         <Input
           placeholder={placeholder}
-          className={cn(className)}
+          className={cn(className, { 'border-destructive': !!error })}
           onChange={onChange}
           value={value}
           disabled={disabled}
@@ -45,7 +48,7 @@ const FormInput = ({
           autoComplete="off"
         />
       </FormControl>
-      <FormDescription>{description}</FormDescription>
+      {!!description && <FormDescription>{description}</FormDescription>}
       <FormMessage />
     </FormItem>
   )
