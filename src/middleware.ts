@@ -5,10 +5,10 @@ import { COOKIES } from './constants/enum'
 import { locales } from './i18n'
 
 export default async function middleware(request: NextRequest) {
+  const cookies = request.cookies
   const defaultLocale = locales[0]
-  const locale =
-    request.cookies.get(COOKIES.NEXT_LOCALE)?.value ?? defaultLocale
   const pathname = request.nextUrl.pathname
+  const locale = cookies.get(COOKIES.NEXT_LOCALE)?.value ?? defaultLocale
 
   const pathnameIsMissingLocale = locales.every(
     (locale) =>
