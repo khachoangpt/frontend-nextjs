@@ -7,7 +7,7 @@ export const $LoginDTO = {
     shop: {
       type: 'Shop',
     },
-    token: {
+    tokens: {
       properties: {
         accessToken: {
           type: 'string',

@@ -1,1 +1,5 @@
-export const COOKIES = { NEXT_LOCALE: 'NEXT_LOCALE' }
+export const COOKIES = {
+  NEXT_LOCALE: 'NEXT_LOCALE',
+  JWT: 'JWT',
+  REFRESH_TOKEN: 'REFRESH_TOKEN',
+}

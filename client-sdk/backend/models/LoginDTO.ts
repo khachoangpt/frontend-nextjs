@@ -7,7 +7,7 @@ import type { Shop } from './Shop';
 
 export type LoginDTO = {
   shop?: Shop;
-  token?: {
+  tokens?: {
     accessToken?: string;
     refreshToken?: string;
   };
