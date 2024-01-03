@@ -1,6 +1,18 @@
 {
   "Common": {
     "title": "Title",
-    "content": "Content"
+    "content": "Content",
+    "header": {
+      "menu": {
+        "feedback": "FEEDBACK",
+        "save-more-on-app": "SAVE MORE ON APP",
+        "sell-on-lazada": "SELL ON LAZADA",
+        "customer-care": "CUSTOMER CARE",
+        "tracking-my-order": "TRACKING MY ORDER",
+        "login": "LOGIN",
+        "signup": "SIGN UP",
+        "change-language": "CHANGE LANGUAGE"
+      }
+    }
   }
 }

@@ -1,6 +1,18 @@
 {
   "Common": {
     "title": "Tiêu đề",
-    "content": "Nội dung"
+    "content": "Nội dung",
+    "header": {
+      "menu": {
+        "feedback": "NHẬN XÉT",
+        "save-more-on-app": "TIẾT KIỆM THÊM TRÊN ỨNG DỤNG",
+        "sell-on-lazada": "BÁN TRÊN LAZADA",
+        "customer-care": "CHĂM SÓC KHÁCH HÀNG",
+        "tracking-my-order": "THEO DÕI ĐƠN HÀNG CỦA TÔI",
+        "login": "ĐĂNG NHẬP",
+        "signup": "ĐĂNG KÝ",
+        "change-language": "THAY ĐỔI NGÔN NGỮ"
+      }
+    }
   }
 }

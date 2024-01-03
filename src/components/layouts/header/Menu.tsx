@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { ReactNode } from 'react'
 
 import Container from '@/components/common/container'
@@ -13,6 +14,22 @@ import {
 } from '@/components/ui/navigation-menu'
 
 const MenuHeader = () => {
+  const t = useTranslations('Common.header.menu')
+
+  const menuItems: { title: ReactNode; href: string }[] = [
+    {
+      href: '#',
+      title: <Paragraph className="text-ff00ff">{t('feedback')}</Paragraph>,
+    },
+    { href: '#', title: t('save-more-on-app') },
+    { href: '#', title: t('sell-on-lazada') },
+    { href: '#', title: t('customer-care') },
+    { href: '#', title: t('tracking-my-order') },
+    { href: '/login', title: t('login') },
+    { href: '#', title: t('signup') },
+    { href: '#', title: t('change-language') },
+  ]
+
   return (
     <Container className="bg-e7e8ec">
       <NavigationMenu className="m-auto flex max-w-7xl items-center justify-end">
@@ -33,17 +50,3 @@ const MenuHeader = () => {
 }
 
 export default MenuHeader
-
-const menuItems: { title: ReactNode; href: string }[] = [
-  {
-    href: '#',
-    title: <Paragraph className="text-ff00ff">FEEDBACK</Paragraph>,
-  },
-  { href: '#', title: 'SAVE MORE ON APP' },
-  { href: '#', title: 'SELL ON LAZADA' },
-  { href: '#', title: 'CUSTOMER CARE' },
-  { href: '#', title: 'TRACKING MY ORDER' },
-  { href: '/login', title: 'LOGIN' },
-  { href: '#', title: 'SIGN UP' },
-  { href: '#', title: 'CHANGE LANGUAGE' },
-]

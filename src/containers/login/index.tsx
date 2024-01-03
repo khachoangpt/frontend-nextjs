@@ -1,15 +1,13 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 
 import Container from '@/components/common/container'
-import { pickData } from '@/utils/pick-data'
+import { getMessages } from '@/utils/get-messages'
 
 import LoginForm from './components/LoginForm'
 
 const LoginContainer = () => {
-  const messagesLogin = pickData<IntlMessages>({
-    object: useMessages() as IntlMessages,
-    fields: ['Login'],
-  })
+  const messages = useMessages() as IntlMessages
+  const messagesLogin = getMessages(messages, ['Login'])
 
   return (
     <Container>
