@@ -18,7 +18,14 @@ const config = {
       },
     },
     extend: {
+      maxWidth: {
+        primary: '80rem',
+      },
+      backgroundColor: {
+        e7e8ec: '#e7e8ec',
+      },
       colors: {
+        ff00ff: '#ff00ff',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

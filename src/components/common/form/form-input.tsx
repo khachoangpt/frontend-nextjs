@@ -42,6 +42,7 @@ const FormInput = ({
           value={value}
           disabled={disabled}
           type={type}
+          autoComplete="off"
         />
       </FormControl>
       <FormDescription>{description}</FormDescription>
