@@ -49,20 +49,15 @@ export class ProductService {
    * @throws ApiError
    */
   public static getAllProducts({
-    xApiKey,
     limit,
     offset,
   }: {
-    xApiKey: string,
     limit?: number,
     offset?: number,
   }): CancelablePromise<Array<Product>> {
     return __request(OpenAPI, {
       method: 'GET',
       url: '/customer/product',
-      headers: {
-        'x-api-key': xApiKey,
-      },
       query: {
         'limit': limit,
         'offset': offset,

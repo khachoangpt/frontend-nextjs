@@ -1,14 +1,18 @@
-import { getTranslations } from 'next-intl/server'
-
-import Container from '@/components/common/container'
 import DefaultLayout from '@/components/layouts'
+import HomeContainer from '@/containers/home'
+import getProducts from '@/hooks/product/get-all-products'
 
-const HomePage = async () => {
-  const t = await getTranslations('HomePage')
+type PageProps = {
+  searchParams: { offset?: string }
+}
+
+const HomePage = async ({ searchParams }: PageProps) => {
+  const offset = Number(searchParams?.offset)
+  await getProducts({ offset: offset ? offset : 0 })
 
   return (
     <DefaultLayout>
-      <Container>{t('home')}</Container>
+      <HomeContainer />
     </DefaultLayout>
   )
 }
