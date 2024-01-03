@@ -1,7 +1,7 @@
 import { useProductStore } from '@/store/product'
 import { ProductService } from '$/backend'
 
-const getProducts = async ({ offset = 0 }: { offset: number }) => {
+export const getProducts = async ({ offset = 0 }: { offset: number }) => {
   try {
     const products = await ProductService.getAllProducts({
       limit: 50,
@@ -14,5 +14,3 @@ const getProducts = async ({ offset = 0 }: { offset: number }) => {
     return { products: [] }
   }
 }
-
-export default getProducts

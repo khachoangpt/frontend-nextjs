@@ -1,6 +1,6 @@
+import { getProducts } from '@/actions'
 import DefaultLayout from '@/components/layouts'
 import HomeContainer from '@/containers/home'
-import getProducts from '@/hooks/product/get-all-products'
 
 type PageProps = {
   searchParams: { offset?: string }
