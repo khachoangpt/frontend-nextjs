@@ -3,3 +3,5 @@ export const COOKIES = {
   JWT: 'JWT',
   REFRESH_TOKEN: 'REFRESH_TOKEN',
 }
+
+export const REVALIDATE_TIME_DEFAULT = 3600
