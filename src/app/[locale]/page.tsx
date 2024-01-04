@@ -1,4 +1,4 @@
-import { getProducts } from '@/actions'
+import { getProducts } from '@/api'
 import DefaultLayout from '@/components/layouts'
 import HomeContainer from '@/containers/home'
 
