@@ -15,6 +15,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from 'react'
 
@@ -128,20 +129,32 @@ const Carousel = forwardRef<
       }
     }, [api, onSelect])
 
+    const providerValue = useMemo(
+      () => ({
+        carouselRef,
+        api: api,
+        opts,
+        orientation:
+          orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
+        scrollPrev,
+        scrollNext,
+        canScrollPrev,
+        canScrollNext,
+      }),
+      [
+        api,
+        canScrollNext,
+        canScrollPrev,
+        carouselRef,
+        opts,
+        orientation,
+        scrollNext,
+        scrollPrev,
+      ],
+    )
+
     return (
-      <CarouselContext.Provider
-        value={{
-          carouselRef,
-          api: api,
-          opts,
-          orientation:
-            orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
-          scrollPrev,
-          scrollNext,
-          canScrollPrev,
-          canScrollNext,
-        }}
-      >
+      <CarouselContext.Provider value={providerValue}>
         <div
           ref={ref}
           onKeyDownCapture={handleKeyDown}
