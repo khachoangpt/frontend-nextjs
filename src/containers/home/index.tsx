@@ -7,8 +7,8 @@ const HomeContainer = () => {
 
   return (
     <Container>
-      {products.map((product, index) => (
-        <Container key={`${product.title}_${index}`}>
+      {products.map((product) => (
+        <Container key={product.title}>
           <Paragraph>{product.title}</Paragraph>
         </Container>
       ))}
